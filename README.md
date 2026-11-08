@@ -58,4 +58,4 @@ python -m unittest discover -s tests -p 'test_rag_evaluation_*.py' -v
 
 仓库支持从源码克隆后安装和试用；尚未发布 PyPI 包、带版本标签的发行版或升级迁移流程。测评角色和必需证据类别来自当前工具内置的 readiness profile，组织应先确认它适用于自身治理要求。
 
-本仓库目前没有声明许可证。公开可见不等于授予复制、修改或分发权限；在增加许可证前，请先取得仓库所有者的授权。
+本项目采用 [MIT License](LICENSE)。
