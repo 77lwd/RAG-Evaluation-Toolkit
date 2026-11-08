@@ -1,0 +1,42 @@
+{
+  "schema_version": "2",
+  "kind": "readiness_submission",
+  "id": "team-readiness",
+  "revision": 1,
+  "comparison_plan": {
+    "kind": "comparison_plan",
+    "id": "team-screening-01",
+    "revision": 1,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "mode": "team_formal",
+  "evidence": [
+    {"category": "scope_and_sampling", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/scope-and-sampling.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "dataset_permission", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/dataset-permission.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "split_and_exposure_audit", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/split-and-exposure-audit.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "gold_rubric_and_calibration", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/gold-rubric-and-calibration.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "metrics_statistics_and_sample_size", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/metrics-statistics-and-sample-size.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "blind_review_plan", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/blind-review-plan.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "access_and_data_flow", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/access-and-data-flow.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "system_runtime_identity", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/system-runtime-identity.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "run_safety_and_recovery", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/run-safety-and-recovery.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "serious_error_audit", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/serious-error-audit.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}},
+    {"category": "approvals_and_signoff", "artifact": {"root_id": "evaluation-evidence", "path": "evidence/approvals-and-signoff.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "size_bytes": 0, "visibility": "public"}}
+  ],
+  "roles": [
+    {"role_id": "evaluation_owner", "person_id": "team-evaluation-owner"},
+    {"role_id": "data_custodian", "person_id": "team-data-custodian"},
+    {"role_id": "independent_auditor", "person_id": "team-independent-auditor"},
+    {"role_id": "annotator", "person_id": "team-annotator"},
+    {"role_id": "gold_reviewer", "person_id": "team-gold-reviewer"},
+    {"role_id": "adjudicator", "person_id": "team-adjudicator"}
+  ],
+  "review_assignments": [
+    {"unit_id": "unit-001", "arm_id": "baseline-prod-2026-01", "reviewer_id": "team-reviewer-01", "actor_type": "human"},
+    {"unit_id": "unit-001", "arm_id": "baseline-prod-2026-01", "reviewer_id": "team-reviewer-02", "actor_type": "human"},
+    {"unit_id": "unit-001", "arm_id": "candidate-retrieval-v2", "reviewer_id": "team-reviewer-03", "actor_type": "human"},
+    {"unit_id": "unit-001", "arm_id": "candidate-retrieval-v2", "reviewer_id": "team-reviewer-04", "actor_type": "human"},
+    {"unit_id": "unit-001", "arm_id": "candidate-reranker-v1", "reviewer_id": "team-reviewer-05", "actor_type": "human"},
+    {"unit_id": "unit-001", "arm_id": "candidate-reranker-v1", "reviewer_id": "team-reviewer-06", "actor_type": "human"}
+  ]
+}

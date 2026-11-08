@@ -1,0 +1,39 @@
+{
+  "kind": "comparison_plan",
+  "schema_version": "2",
+  "id": "team-screening-01",
+  "revision": 1,
+  "mode": "exploratory_screening",
+  "arms": [
+    {
+      "arm_id": "baseline-prod-2026-01",
+      "role": "baseline",
+      "snapshot": {
+        "kind": "system_snapshot",
+        "id": "team-model-v1",
+        "revision": 1,
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "arm_id": "candidate-retrieval-v2",
+      "role": "candidate",
+      "snapshot": {
+        "kind": "system_snapshot",
+        "id": "team-model-v2",
+        "revision": 1,
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      }
+    },
+    {
+      "arm_id": "candidate-reranker-v1",
+      "role": "candidate",
+      "snapshot": {
+        "kind": "system_snapshot",
+        "id": "team-model-reranker",
+        "revision": 1,
+        "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+      }
+    }
+  ]
+}

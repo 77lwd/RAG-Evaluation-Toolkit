@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-evaluation-toolkit"
+version = "0.1.0"
+description = "Configurable governance toolkit for RAG evaluations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pydantic==2.13.4"]
+
+[project.scripts]
+rag-evaluation = "rag_evaluation.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rag_evaluation*"]

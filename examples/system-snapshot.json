@@ -1,0 +1,12 @@
+{
+  "kind": "system_snapshot",
+  "schema_version": "2",
+  "id": "team-model-v1",
+  "revision": 1,
+  "system_id": "team-model",
+  "identity": "replace-with-team-defined-system-identity",
+  "root_id": "evaluation-evidence",
+  "runtime_verified": false,
+  "materials": {},
+  "notes": "Synthetic template; replace identity and attach evidence before use."
+}

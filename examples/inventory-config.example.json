@@ -1,0 +1,69 @@
+{
+  "schema_version": "1",
+  "inventory_id": "replace-with-team-evaluation-id",
+  "systems": [
+    {
+      "system_id": "support-rag-baseline",
+      "identity": "team/support-rag@baseline-release",
+      "root_id": "baseline-source",
+      "source_root": "../team-workspace/baseline",
+      "snapshot_id": "support-rag-baseline-source",
+      "paths": ["service/app.py", "retrieval/search.py"],
+      "allowed_paths": ["service/app.py", "retrieval/search.py"]
+    },
+    {
+      "system_id": "support-rag-r7",
+      "identity": "team/support-rag@r7",
+      "root_id": "r7-source",
+      "source_root": "../team-workspace/r7",
+      "snapshot_id": "support-rag-r7-source",
+      "paths": ["service/app.py", "retrieval/search.py"],
+      "allowed_paths": ["service/app.py", "retrieval/search.py"]
+    },
+    {
+      "system_id": "support-rag-r8-reranker",
+      "identity": "team/support-rag@r8-reranker",
+      "root_id": "r8-source",
+      "source_root": "../team-workspace/r8-reranker",
+      "snapshot_id": "support-rag-r8-reranker-source",
+      "paths": ["service/app.py", "retrieval/search.py"],
+      "allowed_paths": ["service/app.py", "retrieval/search.py"]
+    }
+  ],
+  "materials": [
+    {
+      "asset_id": "prior-evaluation-report",
+      "root_id": "evaluation-history",
+      "source_root": "../team-workspace/evaluation-history",
+      "path": "reports/prior-run.json"
+    },
+    {
+      "asset_id": "restricted-review-data",
+      "root_id": "evaluation-history",
+      "source_root": "../team-workspace/evaluation-history",
+      "path": "restricted/reviewer-notes.json",
+      "visibility": "restricted"
+    }
+  ],
+  "comparison": {
+    "plan_id": "support-rag-screening-01",
+    "mode": "exploratory_screening",
+    "arms": [
+      {
+        "system_id": "support-rag-baseline",
+        "arm_id": "current-release",
+        "role": "baseline"
+      },
+      {
+        "system_id": "support-rag-r7",
+        "arm_id": "release-r7",
+        "role": "candidate"
+      },
+      {
+        "system_id": "support-rag-r8-reranker",
+        "arm_id": "release-r8-reranker",
+        "role": "candidate"
+      }
+    ]
+  }
+}
