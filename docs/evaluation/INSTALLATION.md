@@ -2,24 +2,36 @@
 
 ## Install from a checkout
 
-Clone the Toolkit repository, create a virtual environment, and install the package in editable
-mode. This installs the `rag-evaluation` command and keeps dependencies isolated from the host
-project:
+Clone the Toolkit repository, create a virtual environment, and install the package. This installs
+the `rag-evaluation` command and keeps dependencies isolated from the host project.
+
+Windows PowerShell:
 
 ```powershell
 git clone https://github.com/77lwd/RAG-Evaluation-Toolkit.git
 cd RAG-Evaluation-Toolkit
-python -m venv .venv
+py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -e .
+python -m pip install .
 rag-evaluation --help
 python -m examples.quickstart
 python -m unittest discover -s tests -p 'test_rag_evaluation_*.py' -v
 ```
 
-Use `source .venv/bin/activate` to activate the environment on macOS/Linux. The package supports
-Python 3.10 or newer. `requirements-evaluation.txt` remains available for a fully pinned test
-environment.
+macOS/Linux:
+
+```bash
+git clone https://github.com/77lwd/RAG-Evaluation-Toolkit.git
+cd RAG-Evaluation-Toolkit
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install .
+python -m examples.quickstart
+python -m unittest discover -s tests -p 'test_rag_evaluation_*.py' -v
+```
+
+The package supports Python 3.10 or newer. `requirements-evaluation.txt` remains available for a
+fully pinned test environment.
 
 The quickstart uses temporary synthetic evidence, runs no model, and deletes its temporary
 registry when it exits. Its `complete_for_independent_review` and `valid_metadata_seal` results

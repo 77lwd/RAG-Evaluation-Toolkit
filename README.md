@@ -11,17 +11,20 @@
 ```powershell
 git clone https://github.com/77lwd/RAG-Evaluation-Toolkit.git
 cd RAG-Evaluation-Toolkit
-python -m venv .venv
+py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -e .
+python -m pip install .
 rag-evaluation --help
 ```
 
-macOS/Linux 激活环境时使用 `source .venv/bin/activate`。也可以不激活环境，直接调用虚拟环境中的 Python：
+macOS/Linux 使用 `python3` 创建环境并激活：
 
-```powershell
-.\.venv\Scripts\python.exe -m rag_evaluation --help
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install .
+rag-evaluation --help
 ```
 
 需要 Python 3.10 或更高版本。依赖与代码安装在虚拟环境中，不会添加到业务项目依赖里。
